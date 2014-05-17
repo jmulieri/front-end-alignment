@@ -15,9 +15,9 @@ public class RegexTextAligner {
   int          maxIdx;
 
   public RegexTextAligner(String text, String regex) {
-    this.text = text;
+    this.text    = text;
     this.pattern = Pattern.compile(regex);
-    this.lines = Arrays.asList(text.split("\n", -1));
+    this.lines   = Arrays.asList(text.split("\n", -1));
   }
 
   public String alignText() {
