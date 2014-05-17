@@ -10,7 +10,7 @@ A simple IntelliJ plugin that adds an action, **Regex Align**, that will align l
 1. Choose the front_end_alignment.jar file located in this projects root directory
 1. Restart IntelliJ to activate plugin
 
-## Adding a keyboard shortcut for 'Regex Align' action
+## Adding a keyboard shortcut for 'Regex Align'
 
 1. In IntelliJ, navigate to the following menu selection: File => Settings => Keymap
 1. In the search bar in the upper right of the dialog, search for Regex Align
