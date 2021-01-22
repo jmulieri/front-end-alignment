@@ -25,9 +25,8 @@ public class RegexTextAligner {
   }
 
   private List<String> alignLines(List<LineWithIndex> linesWithIndices) {
-    for(int i = 0; i < linesWithIndices.size(); i++) {
-      LineWithIndex lineWithIndex = linesWithIndices.get(i);
-      if(lineWithIndex.idx < maxIdx) {
+    for (LineWithIndex lineWithIndex : linesWithIndices) {
+      if (lineWithIndex.idx < maxIdx) {
         lines.set(lineWithIndex.lineIdx, lineWithIndex.injectSpaces(maxIdx));
       }
     }
@@ -36,7 +35,7 @@ public class RegexTextAligner {
 
   private List<LineWithIndex> buildLinesWithIndices() {
     maxIdx = 0;
-    List<LineWithIndex> linesWithIndices = new ArrayList<LineWithIndex>();
+    List<LineWithIndex> linesWithIndices = new ArrayList<>();
     for(int i = 0; i < lines.size(); i++) {
       String line = lines.get(i);
       Matcher matcher = pattern.matcher(line);
@@ -51,7 +50,7 @@ public class RegexTextAligner {
     return linesWithIndices;
   }
 
-  class LineWithIndex {
+  static class LineWithIndex {
     String line;
     int    lineIdx;
     int    idx;
